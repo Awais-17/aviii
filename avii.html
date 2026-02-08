@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="proposal-section">
+            <img id="status-gif" src="https://media.tenor.com/ZhNxfL0GmoMAAAAj/mocha-bear-hearts.gif alt="Cute Panda">
+            <h1 id="question">Will you be my Valentine? Aviiii🥺</h1>
+            <div class="buttons">
+                <p><button id="yesButton" onclick="showLove()">YES!</button>
+                <button id="noButton" onclick="handleNoClick()">No</button></p>
+            </div>
+        </div>
+        <div id="success-section" class="hidden">
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUydTM1ZjA0Z2UyczR5NGVyeHhzeDlxMTE5Y2FzcndlajMxem4wNngweSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IzXiddo2twMmdmU8Lv/source.gif" alt="Happy Panda">
+            <h1>Yay! I love SOOO much Aviiii! My-LOVE My-Baby My-Wifeeeee  ❤️</h1>
+            <h1>Now MY Valentine🫶🏻</h1>
+            <p>I knew you'd say yes!</p>
+    <button onclick="goToGifts()">Hope you like my Gifts my love 🎁</button>
+</div>
+
+    </div>
+    <script src="script.js"></script>
+    <div id="gift-selection" class="hidden">
+    <h1>Something for You 🎁</h1>
+    <div class="gift-grid">
+        <div class="gift-card" onclick="showGallery()">
+            <div class="icon">
+                <img src="https://i.pinimg.com/originals/ee/f1/8e/eef18ec08f5d93096607e804a508703c.gif "alt="love Avii">
+            </div>
+            <h2 style="color: rgb(180, 34, 141);">Gift 1👆🏻</h2>
+        </div>
+        <div class="gift-card" onclick="showLetter()">
+            <div class="icon">
+                <img src="data:image/jpeg;base64,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">
+            </div>
+            <h2 style="color: rgb(180, 34, 141);">Gift 2👆🏻</h2>
+        </div>
+    </div>
+</div>
+
+<div id="photo-gallery" class="hidden">
+    <button class="back-btn" onclick="backToGifts()">← Back</button>
+    <h2>Us if long distance wasn't there</h2>
+    <div class="gallery-grid">
+        <img src="avii3.jpeg" class="gallery-img">
+        <img src="avii2.jpeg" class="gallery-img">
+        <img src="avii1.jpeg" class="gallery-img">
+        
+    </div>
+</div>
+
+<div id="letter-section" class="hidden">
+    <button class="back-btn" onclick="backToGifts()">← Back</button>
+    <div class="letter-paper">
+        <h2>My Avii,</h2>
+        <p>
+             I am here. I see the way you give your heart to people, and I hate that they’ve made you feel like you're 'too much' or 'at fault.' You aren't.
+You have me, completely and permanently. I promise to never blame you and to never let you face those dark moments by yourself. You are so loved, even on the days you find it hard to love yourself.
+"I LOVE YOU SOOOOO MUCH"
+        </p>
+        <p>You make every day feel like Valentine's Day My Love. ❤️</p>
+        <p class="signature">Forever Yours, Your Awi</p>
+    </div>
+</div>
+</body>
+</html>
